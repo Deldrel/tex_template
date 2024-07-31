@@ -1,0 +1,28 @@
+\subsection{Table Subsection}\label{subsec:table-subsection}
+\lipsum[1]
+\begin{table}[htbp]
+    \caption{
+        Example Table
+    }
+    \center
+    \begin{tabular}{@{}lllll@{}}
+        \toprule
+        \textbf{Metric} & \textbf{DCRNN} & \multicolumn{3}{c}{\textbf{Adapted DCRNN}} \\
+        & \textbf{Cars} & \textbf{Cars} & \textbf{Wheelchairs} & \textbf{All} \\
+        \midrule
+        MAE  & 3.60          & 2.67          & 0.08                 & 6.84         \\
+        RMSE & 7.59          & 8.59          & 0.18                 & 14.8         \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:example-table}
+\end{table}
+
+\subsection{Math Subsection}\label{subsec:math-subsection}
+\lipsum[1]
+\begin{equation}
+    f(x, y) = \frac{x}{x + y} \times \log(x + y + 1)\label{eq:accessibility_score}
+\end{equation}
+
+\begin{equation}
+    RMSE(y, \hat{y}) = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2}\label{eq:rmse}
+\end{equation}

@@ -1,0 +1,97 @@
+\documentclass[10pt]{article}
+
+% Geometry for page layout
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% Font and encoding
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Section fonts and colors
+\usepackage{xcolor}
+\usepackage{sectsty}
+
+% Lists
+\usepackage{enumitem}
+
+% Tables
+\usepackage{array}
+\usepackage{booktabs}
+
+% PDF inclusion
+\usepackage{pdfpages}
+
+% Ensure the first paragraph of each section is indented
+\usepackage{indentfirst}
+
+% Paragraph formatting
+\usepackage{parskip}
+\setlength{\parindent}{15pt}
+\setlength{\parskip}{1em}
+
+% Color definitions
+\definecolor{bleu_ece}{HTML}{00727A}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=bleu_ece,
+    urlcolor=black,
+    citecolor=black,
+    pdfborder={0 0 0}
+}
+
+% Section styles
+\sectionfont{\color{bleu_ece}}
+\subsectionfont{\color{bleu_ece}}
+\subsubsectionfont{\color{bleu_ece}}
+
+% Caption setup for subfigures
+\captionsetup[subfigure]{labelformat=empty}
+
+% Fancy header and footer
+\fancypagestyle{mystyle}{
+    \fancyhf{}
+    \fancyhead[L]{}
+    \fancyhead[C]{}
+    \fancyhead[R]{\vspace{-1em}\includegraphics[height=1.09283005238cm]{resources/logo_ece}}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{mystyle}
+
+% Title and authors
+\title{\LaTeX{} Template}
+\author{Pierre LAPOLLA \& Other}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    %\renewcommand{\contentsname}{Table des matières}
+    \tableofcontents
+
+
+    \section{First Section}\label{sec:first-section}
+    \input{sections/first_section}
+
+
+    \section{Second Section}\label{sec:second-section}
+    \input{sections/second_section}
+
+    \vfill
+    \begin{center}
+        \textit{This document was generated using \LaTeX{} and the source code is available at: \\
+        \url{https://github.com/}}
+    \end{center}
+
+\end{document}

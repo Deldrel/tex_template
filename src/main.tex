@@ -54,20 +54,17 @@
 \subsectionfont{\color{bleu_ece}}
 \subsubsectionfont{\color{bleu_ece}}
 
-% Caption setup for subfigures
-\captionsetup[subfigure]{labelformat=empty}
-
-% Fancy header and footer
-\fancypagestyle{mystyle}{
+% Header and footer
+\fancypagestyle{plain}{
     \fancyhf{}
     \fancyhead[L]{}
     \fancyhead[C]{}
-    \fancyhead[R]{\vspace{-1em}\includegraphics[height=1.09283005238cm]{resources/logo_ece}}
+    \fancyhead[R]{\vspace{-2em}\includegraphics[height=5em]{resources/logo_ece}}
     \fancyfoot[C]{\thepage}
     \renewcommand{\headrulewidth}{0pt}
     \renewcommand{\footrulewidth}{0pt}
 }
-\pagestyle{mystyle}
+\pagestyle{plain}
 
 % Title and authors
 \title{\LaTeX{} Template}

@@ -1,5 +1,4 @@
 \subsection{Table Subsection}\label{subsec:table-subsection}
-\lipsum[1]
 \begin{table}[htbp]
     \caption{
         Example Table
@@ -18,11 +17,18 @@
 \end{table}
 
 \subsection{Math Subsection}\label{subsec:math-subsection}
-\lipsum[1]
+Equation~\eqref{eq:example-equation} is an example of a mathematical equation.
 \begin{equation}
-    f(x, y) = \frac{x}{x + y} \times \log(x + y + 1)\label{eq:accessibility_score}
+    \begin{aligned}
+        \int_{0}^{\infty} & \left( \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^s} \sin(nx) \right)^2 dx \\
+        &= \int_{0}^{\infty} \left( \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^s} \sin(nx) \right)
+        \left( \sum_{m=1}^{\infty} \frac{(-1)^{m+1}}{m^s} \sin(mx) \right) dx \\
+        &= \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} \frac{(-1)^{n+m}}{(nm)^s} \int_{0}^{\infty} \sin(nx) \sin(mx) \, dx \\
+        &= \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} \frac{(-1)^{n+m}}{(nm)^s}
+        \frac{\pi}{2} (\delta_{n,m} - \delta_{n,-m}) \\
+        &= \frac{\pi}{2} \sum_{n=1}^{\infty} \frac{1}{n^{2s}} \\
+        &= \frac{\pi}{2} \zeta(2s)
+    \end{aligned}
+    \label{eq:example-equation}
 \end{equation}
 
-\begin{equation}
-    RMSE(y, \hat{y}) = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2}\label{eq:rmse}
-\end{equation}

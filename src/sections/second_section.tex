@@ -1,34 +1,87 @@
-\subsection{Table Subsection}\label{subsec:table-subsection}
+\subsection{Text formatting}\label{subsec:text-formatting}
+\textbf{Bold Text}
+
+\textit{Italic Text}
+
+\underline{Underlined Text}
+
+\subsection{Lists}\label{subsec:lists}
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+\end{itemize}
+
+\begin{enumerate}
+    \item First item
+    \item Second item
+\end{enumerate}
+
+\subsection{Figures}\label{subsec:figures}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.25\textwidth]{images/default}
+    \caption{
+        Figure Insertion Example
+    }
+    \label{fig:figure-insertion-example}
+\end{figure}
+
+\subsection{Tables}\label{subsec:tables}
 \begin{table}[htbp]
     \caption{
         Example Table
     }
     \center
-    \begin{tabular}{@{}lllll@{}}
+    \begin{tabular}{@{}lll@{}}
         \toprule
-        \textbf{Metric} & \textbf{DCRNN} & \multicolumn{3}{c}{\textbf{Adapted DCRNN}} \\
-        & \textbf{Cars} & \textbf{Cars} & \textbf{Wheelchairs} & \textbf{All} \\
+        \textbf{Metric} & \textbf{DCRNN} & \textbf{Adapted DCRNN} \\
         \midrule
-        MAE  & 3.60          & 2.67          & 0.08                 & 6.84         \\
-        RMSE & 7.59          & 8.59          & 0.18                 & 14.8         \\
+        MAE             & 3.60           & 2.67                   \\
+        RMSE            & 7.59           & 8.59                   \\
         \bottomrule
     \end{tabular}
     \label{tab:example-table}
 \end{table}
 
-\subsection{Math Subsection}\label{subsec:math-subsection}
-Equation~\eqref{eq:example-equation} is an example of a mathematical equation.
+\subsection{Maths}\label{subsec:maths}
+Inline math: \( a^2 + b^2 = c^2 \) or $ a^2 + b^2 = c^2 $
+
+Display math:
+\[
+    \int_{a}^{b} f(x) \, dx
+\]
+
+Equation (recommended):
 \begin{equation}
-    \begin{aligned}
-        \int_{0}^{\infty} & \left( \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^s} \sin(nx) \right)^2 dx \\
-        &= \int_{0}^{\infty} \left( \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^s} \sin(nx) \right)
-        \left( \sum_{m=1}^{\infty} \frac{(-1)^{m+1}}{m^s} \sin(mx) \right) dx \\
-        &= \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} \frac{(-1)^{n+m}}{(nm)^s} \int_{0}^{\infty} \sin(nx) \sin(mx) \, dx \\
-        &= \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} \frac{(-1)^{n+m}}{(nm)^s}
-        \frac{\pi}{2} (\delta_{n,m} - \delta_{n,-m}) \\
-        &= \frac{\pi}{2} \sum_{n=1}^{\infty} \frac{1}{n^{2s}} \\
-        &= \frac{\pi}{2} \zeta(2s)
-    \end{aligned}
-    \label{eq:example-equation}
+    E = mc^2\label{eq:equation}
 \end{equation}
 
+\subsection{Multi-column layouts}\label{subsec:multi-column-layouts}
+\begin{multicols}{2}
+    \lipsum[1]
+\end{multicols}
+
+\subsection{Code snippets}\label{subsec:code-snippets}
+\lstinputlisting[
+    language=Python,
+    showstringspaces=false,
+    caption={Python code snippet},
+    label={lst:code/main.py}
+]{code/main.py}
+
+\subsection{References}\label{subsec:references}
+Reference to a section:~\ref{sec:first-section}
+
+Reference to a subsection:~\ref{subsec:subsection}
+
+Reference to a subsubsection:~\ref{subsubsec:subsubsection}
+
+Reference to a figure:~\ref{fig:figure-insertion-example}
+
+Reference to a table:~\ref{tab:example-table}
+
+Reference to an equation:~\eqref{eq:equation}
+
+Reference to a code snippet:~\ref{lst:code/main.py}
+
+Note that references might need 2 compilation to work.
